@@ -1,0 +1,11 @@
+flask
+requests
+beautifulsoup4
+newspaper3k
+transformers
+torch
+gtts
+streamlit
+plotly
+vaderSentiment
+sentencepiece
