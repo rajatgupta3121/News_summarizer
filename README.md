@@ -1,93 +1,131 @@
----
+# 📰 AI-Powered News Summarization & Sentiment Analysis Web App
 
-## 📢 **Company News Summarization & Sentiment Analysis App (with Hindi Audio)**  
-##🚀 **Live Demo**: [Click here to use the app on Hugging Face Spaces](https://huggingface.co/spaces/rajatgupta3121/News_summarizer)  
+## 🔍 Overview
 
----
-
-### ✅ **Project Overview**  
-In today’s fast-paced world, professionals, investors, and researchers need quick, actionable insights from scattered news sources. This AI-powered application helps users:  
-- Fetch the latest news articles about any company  
-- Generate intelligent summaries using transformer-based models  
-- Analyze sentiment distribution across multiple articles  
-- Compare coverage differences and detect topic overlaps  
-- Get an auto-generated **Hindi audio summary** for localized understanding  
+This is a powerful and user-friendly **AI-based News Summarization Web Application** that helps users stay informed quickly and efficiently. The app fetches real-time news based on user input, summarizes it using advanced NLP techniques, analyzes the sentiment of the summaries, and even reads them out loud in **English or Hindi** via Text-to-Speech (TTS). The app is inclusive and interactive, featuring **voice search**, **Hindi language support**, and a **fallback web search** system.
 
 ---
 
-### ✅ **Key Features**  
-| 🌟 Feature                               | Description                                                                          |
-|------------------------------------------|--------------------------------------------------------------------------------------|
-| ✅ News Extraction                       | Scrapes latest articles from Bing News about the entered company                    |
-| ✅ Text Summarization                    | Summarizes long-form articles using Hugging Face’s **BART-large-CNN** model         |
-| ✅ Sentiment Analysis                    | Uses **VADER Sentiment Analyzer** to classify article tone as Positive, Negative, or Neutral |
-| ✅ Comparative Insights                  | Analyzes sentiment patterns, topic overlaps, and coverage differences               |
-| ✅ Hindi Audio Summary                   | Generates spoken summary in Hindi using **gTTS (Google Text-to-Speech)**            |
-| ✅ Visual Sentiment Distribution         | Pie chart visualization for easy analysis                                           |
-| ✅ Gradio-based User Interface           | Deployed on Hugging Face Spaces for interactive usage                               |
+## ✨ Key Features
+
+✅ **Real-Time News Fetching**  
+- Fetches current news from reliable sources based on user-entered keywords via News API.
+
+✅ **Abstractive NLP Summarization**  
+- Uses Natural Language Processing to generate concise, context-aware summaries of long news articles.
+
+✅ **Sentiment Analysis**  
+- Applies machine learning to detect and label news sentiment as *Positive, Negative, or Neutral*.
+
+✅ **Text-to-Speech (TTS) Playback**  
+- Converts English or Hindi summaries to speech using `gTTS`, helping visually impaired users or multitaskers.
+
+✅ **Hindi Language Support**  
+- Automatically translates English summaries into Hindi using the `googletrans` library for regional accessibility.
+
+✅ **Voice Search Integration**  
+- Accepts voice commands using `SpeechRecognition` and converts them to keyword-based queries.
+
+✅ **Fallback Mechanism with Web Browser**  
+- Opens a browser search when AI fails to generate meaningful output, ensuring users are never left without results.
 
 ---
 
-### ✅ **Tech Stack & Tools Used**  
-- Python 3.10  
-- **BeautifulSoup** & **newspaper3k** for web scraping  
-- **Hugging Face Transformers (BART-large-cnn)** for summarization  
-- **VADER Sentiment Analyzer** for sentiment scoring  
-- **gTTS** for Hindi text-to-speech audio generation  
-- **Plotly** for interactive sentiment visualization  
-- **Gradio** for building and deploying the frontend  
-- Hosted on: **Hugging Face Spaces**  
+## 🛠️ Technologies Used
+
+| Purpose                | Technology/Library                |
+|------------------------|-----------------------------------|
+| Backend                | Python, Flask                     |
+| Frontend               | HTML, CSS, JavaScript             |
+| News API               | NewsAPI.org or similar            |
+| Summarization          | Transformers (e.g., BART/T5), or custom NLP logic |
+| Sentiment Analysis     | VADER or Custom Trained Classifier|
+| Text-to-Speech         | gTTS                              |
+| Translation            | googletrans                       |
+| Voice Input            | SpeechRecognition, PyAudio        |
+| Fallback Search        | Python `webbrowser` library       |
 
 ---
 
-### ✅ **How the Application Works**  
-1. The user enters a company name.  
-2. The app scrapes up to 10 recent news articles from Bing News.  
-3. Each article is summarized using the BART model.  
-4. Sentiment analysis is performed on each article using VADER.  
-5. The app compiles a comparative sentiment report with topic overlap analysis.  
-6. A Hindi audio summary of the overall sentiment is generated and provided.  
-7. All results are presented interactively on the Gradio interface with visual plots.  
+## 📦 Installation & Setup
 
----
+### 🔧 Prerequisites
+- Python 3.7+
+- pip
+- Internet connection (for APIs)
 
-### ✅ **Project Structure**
-```
-├── app.py                   # Gradio application file
-├── utils.py                 # Backend functions: scraping, summarization, sentiment analysis, TTS
-├── requirements.txt         # List of dependencies for Hugging Face Spaces
-├── huggingface.yaml         # Deployment configuration for Hugging Face
-└── README.md                # Project documentation (this file)
-```
-
----
-
-### ✅ **Installation (if running locally)**
+### 🖥️ Clone the Repository
 ```bash
 git clone https://github.com/rajatgupta3121/News_summarizer.git
-cd News_summarizer
+cd news_summarizer
+```
+
+### 📥 Install Dependencies
+```bash
 pip install -r requirements.txt
+```
+
+Or manually:
+```bash
+pip install flask gtts googletrans==4.0.0-rc1 speechrecognition requests beautifulsoup4 transformers torch
+```
+
+### 🔑 API Key Setup
+1. Go to [NewsAPI.org](https://newsapi.org/)
+2. Sign up and get your API key
+3. Replace `YOUR_API_KEY` in your code (typically in `news_fetcher.py` or similar file)
+
+### 🚀 Run the App
+```bash
 python app.py
 ```
 
----
-
-### ✅ **Live Demo**
-👉 Try the app live on Hugging Face Spaces:  
-➡️ [https://huggingface.co/spaces/rajatgupta3121/News_summarizer](https://huggingface.co/spaces/rajatgupta3121/News_summarizer)  
+Visit `http://127.0.0.1:5000/` in your browser.
 
 ---
 
-### ✅ **Next Improvements (Roadmap)**
-- Add PDF report export  
-- Daily email alerts for company-specific sentiment summaries  
-- Multilingual audio generation (English + Hindi)  
-- User authentication for tracking saved reports  
+## 🎯 Project Objectives & Results
+
+| Objective | Outcome |
+|----------|---------|
+| Real-Time News Fetching | ✅ Successfully integrated API and retrieved relevant news |
+| NLP Summarization | ✅ Meaningful, concise summaries generated |
+| Sentiment Analysis | ✅ Sentiments correctly classified |
+| Text-to-Speech | ✅ English & Hindi playback worked flawlessly |
+| Hindi Support | ✅ Translated summaries for regional users |
+| Voice Search | ✅ Accurate voice-to-text search |
+| Fallback Search | ✅ Opens web browser if no result found |
 
 ---
 
-### 🙌 **Made with ❤️ by Rajat Gupta**  
-> For collaboration or queries:  
-📧 Email: [rajatgupta46300@gmail.com]  
-🌐 GitHub: [https://github.com/rajatgupta3121](https://github.com/rajatgupta3121)  
+## 🚀 Future Enhancements
+
+- Add user authentication and history tracking  
+- Allow users to save or share summaries  
+- Extend support to more Indian languages  
+- Add mobile app version using React Native or Flutter  
+- Improve summarization with larger transformer models
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 📬 Contact
+
+Developed by: **[Rajat Gupta]**  
+📧 Email: rajatgupta46300@gmail.com  
+🔗 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/rajat-gupta-b86a58268/)  
+🌐 Portfolio: [yourportfolio.com](https://rajat-gupta-portfolio.netlify.app/)
+
+---
 
