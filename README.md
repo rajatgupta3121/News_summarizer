@@ -5,7 +5,8 @@
 This is a powerful and user-friendly **AI-based News Summarization Web Application** that helps users stay informed quickly and efficiently. The app fetches real-time news based on user input, summarizes it using advanced NLP techniques, analyzes the sentiment of the summaries, and even reads them out loud in **English or Hindi** via Text-to-Speech (TTS). The app is inclusive and interactive, featuring **voice search**, **Hindi language support**, and a **fallback web search** system.
 
 ---
-
+## Demo Link : [News_summarizer_app](https://huggingface.co/spaces/rajatgupta3121/News_summarizer)
+---
 ## ✨ Key Features
 
 ✅ **Real-Time News Fetching**  
@@ -124,8 +125,8 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 Developed by: **[Rajat Gupta]**  
 📧 Email: rajatgupta46300@gmail.com  
-🔗 LinkedIn: [linkedin.com/in/yourprofile](https://www.linkedin.com/in/rajat-gupta-b86a58268/)  
-🌐 Portfolio: [yourportfolio.com](https://rajat-gupta-portfolio.netlify.app/)
+🔗 LinkedIn: [linkedin.com/in/rajatgupta](https://www.linkedin.com/in/rajat-gupta-b86a58268/)  
+🌐 Portfolio: [myportfolio.com](https://rajat-gupta-portfolio.netlify.app/)
 
 ---
 
